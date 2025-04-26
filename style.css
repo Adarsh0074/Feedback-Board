@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding: auto;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body.light{
+    background: #eab3b3;
+    color: #010101;
+}
+body.dark{
+    background: #121212;
+    color: #eee;
+    transition:background 0.5s,color 0.5s;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    grid-template-rows: auto auto 1fr;
+    gap:20px
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #dd1515;
+}
+.feedback-form{
+    background: linear-gradient(135deg, #90d48a 0%, #2b6ccd );
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+}
+.feedback-form input,
+.feedback-form textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s ;
+}
+.feedback-form button:hover{
+    background: #6080b0;
+    color: #fff;
+    cursor: pointer;
+}
+.message{
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    
+}
+.feedback-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.feedback-card{
+    background: #d32e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 250px;
+    position: relative;
+    transition: transform 0.3s;
+}
+.feedback-card:hover{
+    transform: translateY(-5px);
+}
+.feedback-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+theme-togle{
+    background: #080707;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.theme-togle:hover{
+    background: #121212;
+    color: #fff;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .feedback-list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container{
+        padding: 10px;
+    }
+}
